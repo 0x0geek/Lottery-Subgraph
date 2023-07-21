@@ -14,38 +14,11 @@ dataSources:
       apiVersion: 0.0.7
       language: wasm/assemblyscript
       entities:
-        - AdminChanged
-        - BeaconUpgraded
-        - BorrowedTicket
-        - ClaimedReward
-        - Initialized
-        - JoinedLottery
-        - OwnershipTransferred
-        - StartedLottery
-        - Upgraded
         - WinnerSelected
       abis:
         - name: Lottery
           file: ./abis/Lottery.json
       eventHandlers:
-        - event: AdminChanged(address,address)
-          handler: handleAdminChanged
-        - event: BeaconUpgraded(indexed address)
-          handler: handleBeaconUpgraded
-        - event: BorrowedTicket(indexed address,indexed uint256,indexed uint256)
-          handler: handleBorrowedTicket
-        - event: ClaimedReward(indexed uint256)
-          handler: handleClaimedReward
-        - event: Initialized(uint8)
-          handler: handleInitialized
-        - event: JoinedLottery(indexed uint256,indexed address,indexed uint256)
-          handler: handleJoinedLottery
-        - event: OwnershipTransferred(indexed address,indexed address)
-          handler: handleOwnershipTransferred
-        - event: StartedLottery(indexed uint256)
-          handler: handleStartedLottery
-        - event: Upgraded(indexed address)
-          handler: handleUpgraded
         - event: WinnerSelected(address[])
           handler: handleWinnerSelected
       file: ./src/lottery.ts
