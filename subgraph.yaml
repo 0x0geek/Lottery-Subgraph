@@ -6,7 +6,7 @@ dataSources:
     name: Lottery
     network: mumbai
     source:
-      address: "0x51dc3395a4f1985Ca9dd622e6627096726a859E5"
+      address: "0xCCF6a20fd003C44cB48c3cF6A211659262d70F23"
       abi: Lottery
       startBlock: 0
     mapping:
